@@ -1,0 +1,28 @@
+.preview {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.preview__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: color.change($fade-color, $alpha: 0.1);
+    border-radius: calc($border-radius/3);
+}
+
+.preview__text {
+    padding: 1em;
+}
+
+.preview__image {
+    background-image: url(../media/image/preview-image.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.preview__order-button {
+    margin: 1em;
+}
