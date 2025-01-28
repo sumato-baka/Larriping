@@ -1,0 +1,36 @@
+.text-title {
+    font-size: $title-font-size;
+    font-weight: 700;
+}
+
+.text-plain {
+    font-size: $common-font-size;
+}
+
+.text-light {
+    font-size: $light-font-size;
+}
+
+.text-small {
+    font-size: $small-font-size;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-black {
+    color: color.change($black, $alpha: 0.9);
+}
+
+.text-green {
+    color: $secondary-color;
+}
