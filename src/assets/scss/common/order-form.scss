@@ -1,0 +1,73 @@
+.order-form {
+    display: flex;
+    border-radius: calc($border-radius/3);
+    padding: 2em;
+    gap: 1em;
+    align-items: center;
+}
+
+.order-form-row-layout {
+    flex-direction: row;
+}
+
+.order-form-path-gradient {
+    background-image: url(/assets/media/common/order-form-background.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.order-form-block {}
+
+.order-form__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.order-form__title-container {}
+
+.order-form__blank {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+}
+
+.order-form-field {
+    // Высота блока с учётом внутренних отступов для hint'а.
+    height: calc($interactive-object-height - 14px * 2);
+    // Если указать height: 60px, то по непонятной мне причине, таковой высотой станет placeholder input'а, а не сам input.
+    border: none;
+    border-radius: $border-radius;
+    background-color: $white;
+    padding: $common-padding;
+    font-size: $common-font-size;
+    outline: none;
+}
+
+.order-form-field:empty {}
+
+.order-form-field:invalid {
+    color: $red;
+    caret-color: $black;
+}
+
+.order-form__privacy-policy-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.order-form__privacy-policy-text {
+    text-align: center;
+}
+
+.order-form__privacy-policy-checkbox {
+    $order-form-privacy-policy-checkbox-size: 16px;
+
+    flex: 1;
+    width: $order-form-privacy-policy-checkbox-size;
+    height: $order-form-privacy-policy-checkbox-size;
+}
