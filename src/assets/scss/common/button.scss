@@ -1,0 +1,112 @@
+$button-transition: all 0.3s linear;
+$button-circle-size: 12px;
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    min-height: $interactive-object-height;
+    border: none;
+    border-radius: $border-radius;
+    background-color: transparent;
+    padding: $common-padding;
+    font-size: $light-font-size;
+    transition: $button-transition;
+
+    .button__circle {
+        background-color: $black;
+        width: $button-circle-size;
+        height: $button-circle-size;
+        border-radius: 50%;
+        transition: $button-transition;
+    }
+}
+
+.button-outline {
+    color: $black;
+    border: $secondary-color 1px solid;
+    transition: $button-transition;
+
+    .button-outline__circle {
+        background-color: $primary-color;
+        transition: $button-transition;
+    }
+}
+
+.button-outline:hover {
+    color: $white;
+    background-color: $black;
+    border: transparent 1px solid;
+
+    .button-outline__circle {
+        background-color: $primary-color;
+    }
+}
+
+.button-light {
+    color: $white;
+    background-color: $primary-color;
+    transition: $button-transition;
+
+    .button-light__circle {
+        background-color: $secondary-color;
+        transition: $button-transition;
+    }
+}
+
+.button-light:hover {
+    background-color: $secondary-color;
+
+    .button-light__circle {
+        background-color: $primary-color;
+    }
+}
+
+.button-dark {
+    color: $white;
+    background-color: $secondary-color;
+    transition: $button-transition;
+
+    .button-dark__circle {
+        background-color: $primary-color;
+        transition: $button-transition;
+    }
+}
+
+.button-dark:hover {
+    background-color: $primary-color;
+
+    .button-dark__circle {
+        background-color: $secondary-color;
+    }
+}
+
+.button-yellow {
+    color: $black;
+    background-color: $yellow;
+    transition: $button-transition;
+}
+
+.button-yellow:hover {
+    background-color: color.mix($yellow, $white, 50%);
+}
+
+.button-mobile-menu {
+    $button-mobile-size: 40px;
+
+    min-width: $button-mobile-size;
+    max-width: $button-mobile-size;
+    min-height: $button-mobile-size;
+    max-height: $button-mobile-size;
+    color: $white;
+    background-color: $secondary-color;
+    background-image: url(/assets/media/common/menu-burger.svg);
+    background-size: calc($button-mobile-size/2);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.button-mobile-menu:hover {
+    background-color: color.adjust($secondary-color, $lightness: 10%);
+}
