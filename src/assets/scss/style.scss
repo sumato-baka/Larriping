@@ -1,0 +1,61 @@
+@use 'sass:color';
+
+$primary-color: #389875;
+$secondary-color: #18614D;
+$fade-color: #68A891;
+$white: #ffffff;
+$black: #353E3A;
+$yellow: #FFF568;
+$red: #D62828;
+
+$media: screen;
+
+$title-font-size: 36px;
+$common-font-size: 20px;
+$light-font-size: 16px;
+$small-font-size: 12px;
+
+$mobile-title-font-size: 26px;
+$mobile-common-font-size: 16px;
+
+$border-radius: 100px;
+$common-padding: 0.7em 1em 0.7em 1em;
+$container-padding: 1em;
+
+$max-width-mobile: 900px;
+
+$interactive-object-height: 60px;
+
+@font-face {
+    font-family: 'Golos Text';
+    src: url(../fonts/GolosText-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: 'Golos Text';
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding: 1em;
+
+}
+
+header {
+    padding: 1em;
+}
