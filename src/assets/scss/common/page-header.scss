@@ -1,0 +1,33 @@
+.page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: stretch;
+    align-items: center;
+}
+
+.page-header__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-header__menu {
+    display: flex;
+    background-color: color.change($fade-color, $alpha: 0.1);
+    border-radius: $border-radius;
+    min-height: $interactive-object-height;
+}
+
+.page-header__menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $common-padding;
+    color: $black ;
+    text-decoration: none;
+}
+
+.page-header__mobile-button {
+    display: none;
+}
