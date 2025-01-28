@@ -71,3 +71,13 @@
     width: $order-form-privacy-policy-checkbox-size;
     height: $order-form-privacy-policy-checkbox-size;
 }
+
+@media #{$media} and (max-width: $max-width-mobile) {
+    .order-form {
+        flex-direction: column;
+    }
+
+    .order-form__description {
+        text-align: center;
+    }
+}

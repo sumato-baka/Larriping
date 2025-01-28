@@ -15,6 +15,16 @@
     font-size: $small-font-size;
 }
 
+@media (max-width: $max-width-mobile) {
+    .text-title {
+        font-size: $mobile-title-font-size;
+    }
+
+    .text-plain {
+        font-size: $mobile-common-font-size;
+    }
+}
+
 .text-bold {
     font-weight: 600;
 }
