@@ -36,8 +36,12 @@ $interactive-object-height: 60px;
 }
 
 body {
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
     padding: 0px;
+    row-gap: 1em;
 }
 
 main {
