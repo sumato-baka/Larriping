@@ -18,22 +18,20 @@ $bottom-menu-image-size: 26px;
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    width: 100vw;
 }
 
 .mobile-menu__base {
     display: none;
     position: absolute;
     background-color: color.change($black, $alpha: 0.5);
-    width: 100vh;
-    height: 0;
+    width: 100vw;
 }
 
 .mobile-menu__side {
     display: none;
     position: absolute;
-    min-width: calc($side-menu-width - $side-menu-hpadding * 2);
-    max-width: calc($side-menu-width - $side-menu-hpadding * 2);
+    width: calc($side-menu-width - $side-menu-hpadding * 2);
     padding: 1em $side-menu-hpadding 2em $side-menu-hpadding;
     background-color: $white;
     border-radius: calc($border-radius/4) 0 0 calc($border-radius/4);
@@ -42,7 +40,7 @@ $bottom-menu-image-size: 26px;
 
 .mobile-menu__side>img {
     align-self: center;
-    max-width: $side-menu-logo-width;
+    width: $side-menu-logo-width;
 }
 
 .mobile-menu__bottom {
@@ -64,8 +62,8 @@ $bottom-menu-image-size: 26px;
 }
 
 .mobile-menu__bottom-image {
-    max-width: $bottom-menu-image-size;
-    max-height: $bottom-menu-image-size;
+    width: $bottom-menu-image-size;
+    height: $bottom-menu-image-size;
 }
 
 .mobile-menu__bottom-text {
@@ -76,12 +74,20 @@ $bottom-menu-image-size: 26px;
 @media #{$media} and (max-width: $max-width-mobile) {
     .mobile-menu {
         display: flex;
+        height: 0vh;
+        overflow-y: hidden;
+        transition: height $menu-base-transition-close;
+    }
+
+    .mobile-menu-active {
+        height: 100vh;
+        transition: height $menu-base-transition-open;
     }
 
     .mobile-menu__base {
         display: block;
         opacity: 0;
-        height: 0px;
+        height: 0vh;
         transition:
             opacity $menu-transition-close,
             height $menu-base-transition-close;

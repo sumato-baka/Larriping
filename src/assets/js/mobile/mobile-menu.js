@@ -1,4 +1,4 @@
-let menu_elements = ['mobile-menu__side', 'mobile-menu__base', 'mobile-menu__bottom']
+let menu_elements = ['mobile-menu', 'mobile-menu__side', 'mobile-menu__base', 'mobile-menu__bottom']
 
 function swapMenuVisibility(show) {
     menu_elements.forEach(element => {
