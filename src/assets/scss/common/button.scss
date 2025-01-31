@@ -32,15 +32,31 @@ $button-circle-size: 12px;
         background-color: $primary-color;
         transition: $button-transition;
     }
-}
 
-.button-outline:hover {
-    color: $white;
-    background-color: $black;
-    border: transparent 1px solid;
+    @include media-mobile {
+        &:active {
+            color: $white;
+            background-color: $black;
+            border: transparent 1px solid;
 
-    .button-outline__circle {
-        background-color: $primary-color;
+            .button-outline__circle {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    @include media-tablet {}
+
+    @include media-desktop {
+        &:hover {
+            color: $white;
+            background-color: $black;
+            border: transparent 1px solid;
+
+            .button-outline__circle {
+                background-color: $primary-color;
+            }
+        }
     }
 }
 
@@ -53,13 +69,27 @@ $button-circle-size: 12px;
         background-color: $secondary-color;
         transition: $button-transition;
     }
-}
 
-.button-light:hover {
-    background-color: $secondary-color;
+    @include media-mobile {
+        &:active {
+            background-color: $secondary-color;
 
-    .button-light__circle {
-        background-color: $primary-color;
+            .button-light__circle {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    @include media-tablet {}
+
+    @include media-desktop {
+        &:hover {
+            background-color: $secondary-color;
+
+            .button-light__circle {
+                background-color: $primary-color;
+            }
+        }
     }
 }
 
@@ -72,13 +102,27 @@ $button-circle-size: 12px;
         background-color: $primary-color;
         transition: $button-transition;
     }
-}
 
-.button-dark:hover {
-    background-color: $primary-color;
+    @include media-mobile {
+        &:active {
+            background-color: $primary-color;
 
-    .button-dark__circle {
-        background-color: $secondary-color;
+            .button-dark__circle {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    @include media-tablet {}
+
+    @include media-desktop {
+        &:hover {
+            background-color: $primary-color;
+
+            .button-dark__circle {
+                background-color: $secondary-color;
+            }
+        }
     }
 }
 
@@ -105,8 +149,14 @@ $button-circle-size: 12px;
     background-size: calc($button-mobile-size/2);
     background-position: center;
     background-repeat: no-repeat;
-}
 
-.button-mobile-menu:hover {
-    background-color: color.adjust($secondary-color, $lightness: 10%);
+    @include media-mobile {
+        .button-mobile-menu:active {
+            background-color: color.adjust($secondary-color, $lightness: 10%);
+        }
+    }
+
+    @include media-tablet {}
+
+    @include media-desktop {}
 }
