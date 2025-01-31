@@ -1,20 +1,33 @@
 .text-title {
-    font-size: $title-font-size;
     font-weight: 700;
 
-    @media (max-width: $max-width-mobile) {
+    @include media-mobile {
         & {
             font-size: $mobile-title-font-size;
+        }
+    }
+
+    @include media-tablet {}
+
+    @include media-desktop {
+        & {
+            font-size: $title-font-size;
         }
     }
 }
 
 .text-plain {
-    font-size: $common-font-size;
-
-    @media (max-width: $max-width-mobile) {
+    @include media-mobile {
         & {
             font-size: $mobile-common-font-size;
+        }
+    }
+
+    @include media-tablet {}
+
+    @include media-desktop {
+        & {
+            font-size: $common-font-size;
         }
     }
 }
