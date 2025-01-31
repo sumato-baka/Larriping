@@ -15,7 +15,7 @@ $bottom-menu-image-size: 26px;
 
 .mobile-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -23,8 +23,8 @@ $bottom-menu-image-size: 26px;
     @media #{$media} and (max-width: $max-width-mobile) {
         & {
             display: flex;
-            height: 0vh;
-            overflow-y: hidden;
+            overflow-x: hidden;
+            height: 0;
             transition: height $menu-base-transition-close;
         }
 
@@ -45,7 +45,7 @@ $bottom-menu-image-size: 26px;
         & {
             display: block;
             opacity: 0;
-            height: 0vh;
+            height: 0;
             transition:
                 opacity $menu-transition-close,
                 height $menu-base-transition-close;
@@ -65,6 +65,7 @@ $bottom-menu-image-size: 26px;
     display: none;
     position: absolute;
     width: calc($side-menu-width - $side-menu-hpadding * 2);
+    height: 100%;
     padding: 1em $side-menu-hpadding 2em $side-menu-hpadding;
     background-color: $white;
     border-radius: calc($border-radius/4) 0 0 calc($border-radius/4);
@@ -93,7 +94,14 @@ $bottom-menu-image-size: 26px;
 .mobile-menu__bottom {
     display: none;
     position: fixed;
+    bottom: 0;
     width: 100%;
+
+    @media #{$media} and (max-width: $max-width-mobile) {
+        & {
+            display: flex;
+        }
+    }
 }
 
 .mobile-menu__bottom-item {
