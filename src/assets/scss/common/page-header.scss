@@ -1,7 +1,12 @@
 .page-header {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
+    flex-direction: row;
+    position: sticky;
+    padding: 1em 0;
+    top: 0;
+    background-color: $white;
 }
 
 .page-header__inner {
