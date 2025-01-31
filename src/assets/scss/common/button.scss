@@ -13,6 +13,7 @@ $button-circle-size: 12px;
     padding: $common-padding;
     font-size: $light-font-size;
     transition: $button-transition;
+    cursor: pointer;
 
     .button__circle {
         background-color: $black;
