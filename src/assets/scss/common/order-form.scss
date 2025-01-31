@@ -50,10 +50,8 @@
     row-gap: 0.5em;
 }
 
-.order-form-field {
-    // Высота блока с учётом внутренних отступов для hint'а.
-    height: calc($interactive-object-height - 14px * 2);
-    // Если указать height: 60px, то по непонятной мне причине, таковой высотой станет placeholder input'а, а не сам input.
+.order-form__field {
+    height: $interactive-object-height;
     border: none;
     border-radius: $border-radius;
     background-color: $white;
@@ -61,8 +59,6 @@
     font-size: $common-font-size;
     outline: none;
 }
-
-.order-form-field:empty {}
 
 .order-form-field:invalid {
     color: $red;
