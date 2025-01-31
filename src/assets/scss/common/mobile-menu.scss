@@ -82,7 +82,7 @@ $bottom-menu-image-size: 26px;
     height: 100%;
     padding: 1em $side-menu-hpadding 2em $side-menu-hpadding;
     background-color: $white;
-    border-radius: calc($border-radius/4) 0 0 calc($border-radius/4);
+    border-radius: $border-radius 0 0 $border-radius;
     row-gap: 1.5em;
 
     @include media-mobile {
@@ -141,7 +141,7 @@ $bottom-menu-image-size: 26px;
     flex: 1;
     height: $bottom-menu-item-height;
     background-color: $secondary-color;
-    border-radius: calc($border-radius/5) calc($border-radius/5) 0 0;
+    border-radius: $border-radius $border-radius 0 0;
 }
 
 .mobile-menu__bottom-image {

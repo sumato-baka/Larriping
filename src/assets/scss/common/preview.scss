@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    border-radius: calc($border-radius/3);
+    border-radius: $border-radius;
 
     @include media-mobile {
         & {
