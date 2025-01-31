@@ -1,10 +1,22 @@
 .text-title {
     font-size: $title-font-size;
     font-weight: 700;
+
+    @media (max-width: $max-width-mobile) {
+        & {
+            font-size: $mobile-title-font-size;
+        }
+    }
 }
 
 .text-plain {
     font-size: $common-font-size;
+
+    @media (max-width: $max-width-mobile) {
+        & {
+            font-size: $mobile-common-font-size;
+        }
+    }
 }
 
 .text-light {
@@ -13,16 +25,6 @@
 
 .text-small {
     font-size: $small-font-size;
-}
-
-@media (max-width: $max-width-mobile) {
-    .text-title {
-        font-size: $mobile-title-font-size;
-    }
-
-    .text-plain {
-        font-size: $mobile-common-font-size;
-    }
 }
 
 .text-bold {
