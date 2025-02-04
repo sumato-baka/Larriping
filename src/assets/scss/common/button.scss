@@ -15,8 +15,9 @@ $button-circle-size: 12px;
     transition: $button-transition;
     cursor: pointer;
 
-    .button__circle {
-        background-color: $black;
+    &::after {
+        content: ' ';
+        display: block;
         width: $button-circle-size;
         height: $button-circle-size;
         border-radius: 50%;
@@ -27,22 +28,18 @@ $button-circle-size: 12px;
 .button-outline {
     color: $black;
     border: $secondary-color 1px solid;
-    transition: $button-transition;
 
-    .button-outline__circle {
+    &::after {
         background-color: $primary-color;
-        transition: $button-transition;
     }
 
     @include media-mobile {
         &:active {
             color: $white;
             background-color: $black;
-            border: transparent 1px solid;
+            border: $black 1px solid;
 
-            .button-outline__circle {
-                background-color: $primary-color;
-            }
+            &::after {}
         }
     }
 
@@ -52,11 +49,9 @@ $button-circle-size: 12px;
         &:hover {
             color: $white;
             background-color: $black;
-            border: transparent 1px solid;
+            border: $black 1px solid;
 
-            .button-outline__circle {
-                background-color: $primary-color;
-            }
+            &::after {}
         }
     }
 }
@@ -64,18 +59,16 @@ $button-circle-size: 12px;
 .button-light {
     color: $white;
     background-color: $primary-color;
-    transition: $button-transition;
 
-    .button-light__circle {
+    &::after {
         background-color: $secondary-color;
-        transition: $button-transition;
     }
 
     @include media-mobile {
         &:active {
             background-color: $secondary-color;
 
-            .button-light__circle {
+            &::after {
                 background-color: $primary-color;
             }
         }
@@ -87,7 +80,7 @@ $button-circle-size: 12px;
         &:hover {
             background-color: $secondary-color;
 
-            .button-light__circle {
+            &::after {
                 background-color: $primary-color;
             }
         }
@@ -97,18 +90,16 @@ $button-circle-size: 12px;
 .button-dark {
     color: $white;
     background-color: $secondary-color;
-    transition: $button-transition;
 
-    .button-dark__circle {
+    &::after {
         background-color: $primary-color;
-        transition: $button-transition;
     }
 
     @include media-mobile {
         &:active {
             background-color: $primary-color;
 
-            .button-dark__circle {
+            &::after {
                 background-color: $secondary-color;
             }
         }
@@ -120,7 +111,7 @@ $button-circle-size: 12px;
         &:hover {
             background-color: $primary-color;
 
-            .button-dark__circle {
+            &::after {
                 background-color: $secondary-color;
             }
         }
@@ -130,11 +121,10 @@ $button-circle-size: 12px;
 .button-yellow {
     color: $black;
     background-color: $yellow;
-    transition: $button-transition;
-}
 
-.button-yellow:hover {
+    &:hover {
     background-color: color.mix($yellow, $white, 50%);
+    }
 }
 
 .button-mobile-menu {
@@ -152,7 +142,7 @@ $button-circle-size: 12px;
     background-repeat: no-repeat;
 
     @include media-mobile {
-        .button-mobile-menu:active {
+        &:active {
             background-color: color.adjust($secondary-color, $lightness: 10%);
         }
     }
