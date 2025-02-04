@@ -1,0 +1,72 @@
+.before-after {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 140px 0 0 0;
+}
+
+.before-after__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+}
+
+.before-after__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.before-after__title-container {
+    text-align: center;
+}
+
+.before-after__title {
+    display: inline;
+}
+
+.before-after__plain-text-container {
+    text-align: center;
+}
+
+.before-after__plain-text {
+    display: block;
+    font-size: 22px;
+}
+
+.before-after__presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.before-after__presentation-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.before-after__presentation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 18px;
+}
+
+.before-after__presentation-text {
+    color: color.change($black, $alpha: 0.5);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.before-after__presentation-slider {
+    border-radius: $border-radius;
+    width: 380px;
+    height: 400px;
+}
+
+.before-after__more-button {
+    width: 280px;
+}
