@@ -19,7 +19,7 @@ $('.page-header__mobile-button').on('click', () => {
 
 $(document).on('click', (event) => {
     if ($(event.target).hasClass('mobile-menu__base'))
-        menu_elements.forEach(element => {
-            $(`.${element}`).removeClass(`${element}-active`)
+        menu_elements.forEach(() => {
+            swapMenuVisibility(false);
         })
 })
