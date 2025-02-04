@@ -1,0 +1,65 @@
+.whatif {
+    display: flex;
+    justify-content: center;
+    margin: 68px 0 0 0;
+}
+
+.whatif__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatif__consequences {
+    display: flex;
+    flex-direction: column;
+    margin: 59px 0 0 0;
+}
+
+.whatif__consequence-item {
+    display: flex;
+    flex-direction: row;
+    height: 240px;
+    column-gap: 20px;
+}
+
+.whatif__consequence-image {
+    height: 240px;
+    width: 420px;
+
+    img {
+        display: block;
+        height: inherit;
+        width: inherit;
+        object-fit: cover;
+        object-position: center;
+        border-radius: $border-radius;
+    }
+}
+
+.whatif__consequence-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 44px 0 40px;
+    column-gap: 60px;
+    background-color: color.change($fade-color, $alpha: 0.1);
+    border-radius: $border-radius;
+
+    .whatif__consequence-text:first-child {}
+}
+
+.whatif__consequence-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+
+    span:last-child {
+        white-space: nowrap;
+    }
+}
+
+.whatif__consequence-plain-text {
+    font-size: 16px;
+    line-height: 22.4px;
+}
