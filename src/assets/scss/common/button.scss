@@ -1,17 +1,17 @@
 $button-transition: all 0.3s linear;
-$button-circle-size: 12px;
+$button-circle-size: 14px;
 
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 4px;
+    column-gap: 16px;
     min-height: $interactive-object-height;
     border: none;
     border-radius: $border-radius;
     background-color: transparent;
     padding: $common-padding;
-    font-size: $light-font-size;
+    font-size: 18px;
     transition: $button-transition;
     cursor: pointer;
 
@@ -123,7 +123,7 @@ $button-circle-size: 12px;
     background-color: $yellow;
 
     &:hover {
-    background-color: color.mix($yellow, $white, 50%);
+        background-color: color.mix($yellow, $white, 50%);
     }
 }
 

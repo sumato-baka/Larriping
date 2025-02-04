@@ -1,11 +1,13 @@
 .preview {
     display: flex;
     justify-content: center;
+    margin: 30px 0 0 0;
 }
 
 .preview__inner {
     display: flex;
-    gap: 1em;
+    gap: 20px;
+    height: 620px;
 
     @include media-mobile {
         & {
@@ -25,12 +27,20 @@
 .preview__item {
     display: flex;
     flex-direction: column;
-    flex: 1;
     border-radius: $border-radius;
+
+    &:first-child {
+        padding: 34px 28px 0 28px;
+    }
+
+    &:last-child {
+        max-width: calc(50% - 20px);
+    }
 
     @include media-mobile {
         & {
             background-color: transparent;
+            width: 100%;
         }
     }
 
@@ -39,11 +49,19 @@
     @include media-desktop {
         & {
             background-color: color.change($fade-color, $alpha: 0.1);
+            width: 50%;
         }
     }
 }
 
 .preview__text {
+    display: flex;
+    flex-direction: column;
+
+    .image-list {
+        margin: 33px 0 0 0;
+    }
+
     @include media-mobile {
         & {
             padding: 0;
@@ -60,26 +78,26 @@
 }
 
 .preview__image {
-    background-image: url(../media/image/preview-image.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
+    width: 100%;
 
-    @include media-mobile {
-        & {
-            min-height: 30vh;
-        }
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: $border-radius;
     }
+
+    @include media-mobile {}
 
     @include media-tablet {}
 
-    @include media-desktop {
-        & {
-            min-height: 0;
-        }
-    }
+    @include media-desktop {}
 }
 
 .preview__order-button {
-    margin: 1em;
+    margin: 51px 0 0 16px;
+    width: 306px;
 }

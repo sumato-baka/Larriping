@@ -1,10 +1,12 @@
-$checkbox-size: 16px;
+$checkbox-size: 18px;
 
 .checkbox {
     display: flex;
     flex-shrink: 0;
     min-width: $checkbox-size;
+    max-width: $checkbox-size;
     min-height: $checkbox-size;
+    max-height: $checkbox-size;
     margin: 0;
     padding: 0;
     appearance: initial;
