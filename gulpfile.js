@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
+const order = require('gulp-order');
 
 const src_path = 'src';
 const src_assets_path = 'src/assets';
@@ -25,9 +26,12 @@ function _styles() {
 
 function _scripts() {
 	return src([
-		src_assets_path + '/js/*.js',
+		src_assets_path + '/js/script.js',
 		src_assets_path + '/js/**/*.js'
 	])
+		.pipe(order([
+			'jQuery/jQuery.js'
+		]))
 		.pipe(concat('script.min.js'))
 		.pipe(uglify())
 		.pipe(dest(build_assets_path + '/js'))
