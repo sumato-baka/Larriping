@@ -1,15 +1,14 @@
 .image-list {
     display: flex;
     flex-direction: column;
+    row-gap: 16px;
     padding: 0;
     list-style-type: none;
-    row-gap: 16px;
 }
 
-.image-list__item-container {
+.image-list__item {
     display: flex;
-    align-items: center;
-    gap: 14px;
+    flex-direction: row;
 }
 
 .image-list__image {
