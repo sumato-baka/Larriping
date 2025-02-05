@@ -39,16 +39,15 @@
         }
     }
 
-    @include media-tablet {
+    @include media-tablet {}
+
+    @include media-desktop {
         & {
             display: flex;
             align-items: stretch;
             justify-content: space-around;
-
         }
     }
-
-    @include media-desktop {}
 }
 
 .page-header__menu-item {
@@ -77,13 +76,13 @@
         }
     }
 
-    @include media-tablet {
+    @include media-tablet {}
+
+    @include media-desktop {
         & {
             display: inherit;
         }
     }
-
-    @include media-desktop {}
 }
 
 .page-header__mobile-button {
@@ -93,11 +92,11 @@
         }
     }
 
-    @include media-tablet {
+    @include media-tablet {}
+
+    @include media-desktop {
         & {
             display: none;
         }
     }
-
-    @include media-desktop {}
 }
