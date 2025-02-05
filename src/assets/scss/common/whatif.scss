@@ -46,7 +46,14 @@
     background-color: color.change($fade-color, $alpha: 0.1);
     border-radius: $border-radius;
 
-    .whatif__consequence-text:first-child {}
+    &::before {
+        position: absolute;
+        width: 1px;
+        height: 140px;
+        transform: translateX(180px);
+        content: '';
+        background-color: color.change($black, $alpha: 0.2);
+    }
 }
 
 .whatif__consequence-title {
