@@ -61,6 +61,11 @@ body {
     align-items: center;
     margin: 0;
     padding-bottom: 1em;
+    padding: 0 0 160px 0;
+}
+
+.preload * {
+    transition: none !important;
 }
 
 main {
