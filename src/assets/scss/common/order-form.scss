@@ -259,9 +259,9 @@
 
     @include media-mobile {
         & {
-            column-gap: 22px;
+            column-gap: 3px;
             margin: -3px 0 0 0;
-            padding: 0 28px 0 0;
+            padding: 0 12px 0 0;
         }
     }
 
@@ -287,4 +287,18 @@
     flex: 1;
     width: $order-form-privacy-policy-checkbox-size;
     height: $order-form-privacy-policy-checkbox-size;
+
+    @include media-mobile {
+        & {
+            margin: 8px 0 0 0;
+        }
+    }
+
+    @include media-tablet {
+        & {
+            margin: 0;
+        }
+    }
+
+    @include media-desktop {}
 }
