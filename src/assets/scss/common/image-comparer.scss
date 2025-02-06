@@ -1,5 +1,3 @@
-$image-comparer-aspect-ratio: math.div(380, 400);
-
 .image-comparer {
     display: grid;
     place-content: center;
@@ -9,27 +7,28 @@ $image-comparer-aspect-ratio: math.div(380, 400);
     --position: 50%;
 }
 
-.image-comparer__image-container {
-    aspect-ratio: $image-comparer-aspect-ratio;
-}
+.image-comparer__image-container {}
 
 .image-comparer__slider-image {
     display: block;
-    width: 380px;
-    height: 400px;
+    position: relative;
     object-fit: cover;
-    object-position: left;
+    object-position: 50% 50%;
 }
 
 .image-comparer__image-before-container {
     position: absolute;
     inset: 0;
     width: var(--position);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .image-comparer__image-before {
     filter: grayscale(100%);
+}
+
+.image-comparer__image-after {
+    z-index: -1;
 }
 
 .image-comparer__slider {
@@ -72,5 +71,6 @@ $image-comparer-aspect-ratio: math.div(380, 400);
     left: var(--position);
     transform: translate(-50%, -50%);
     pointer-events: none;
+    background-image: url(/assets/media/common/before-after/left-right-arrow.svg);
     /* z-index: 100; */
 }
