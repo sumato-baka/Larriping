@@ -1,4 +1,4 @@
-$button-transition: all 0.3s linear;
+$button-transition: background-color 0.3s linear;
 $button-circle-size: 14px;
 
 .button {
@@ -11,7 +11,6 @@ $button-circle-size: 14px;
     border-radius: $border-radius;
     background-color: transparent;
     padding: $common-padding;
-    font-size: 18px;
     transition: $button-transition;
     cursor: pointer;
 
@@ -23,6 +22,20 @@ $button-circle-size: 14px;
         border-radius: 50%;
         transition: $button-transition;
     }
+
+    @include media-mobile {
+        & {
+            font-size: 16px;
+        }
+    }
+
+    @include media-tablet {
+        & {
+            font-size: 18px;
+        }
+    }
+
+    @include media-desktop {}
 }
 
 .button-outline {
@@ -43,9 +56,7 @@ $button-circle-size: 14px;
         }
     }
 
-    @include media-tablet {}
-
-    @include media-desktop {
+    @include media-tablet {
         &:hover {
             color: $white;
             background-color: $black;
@@ -54,6 +65,8 @@ $button-circle-size: 14px;
             &::after {}
         }
     }
+
+    @include media-desktop {}
 }
 
 .button-light {
@@ -74,9 +87,7 @@ $button-circle-size: 14px;
         }
     }
 
-    @include media-tablet {}
-
-    @include media-desktop {
+    @include media-tablet {
         &:hover {
             background-color: $secondary-color;
 
@@ -85,6 +96,8 @@ $button-circle-size: 14px;
             }
         }
     }
+
+    @include media-desktop {}
 }
 
 .button-dark {
@@ -105,9 +118,7 @@ $button-circle-size: 14px;
         }
     }
 
-    @include media-tablet {}
-
-    @include media-desktop {
+    @include media-tablet {
         &:hover {
             background-color: $primary-color;
 
@@ -116,6 +127,8 @@ $button-circle-size: 14px;
             }
         }
     }
+
+    @include media-desktop {}
 }
 
 .button-yellow {
@@ -128,7 +141,7 @@ $button-circle-size: 14px;
 }
 
 .button-mobile-menu {
-    $button-mobile-size: 40px;
+    $button-mobile-size: 45px;
 
     min-width: $button-mobile-size;
     max-width: $button-mobile-size;
