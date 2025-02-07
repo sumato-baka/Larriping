@@ -6,7 +6,7 @@ $button-circle-size: 14px;
     align-items: center;
     justify-content: center;
     column-gap: 16px;
-    min-height: $interactive-object-height;
+    height: $interactive-object-height;
     border: none;
     border-radius: $border-radius;
     background-color: transparent;
@@ -144,10 +144,8 @@ $button-circle-size: 14px;
 .button-mobile-menu {
     $button-mobile-size: 45px;
 
-    min-width: $button-mobile-size;
-    max-width: $button-mobile-size;
-    min-height: $button-mobile-size;
-    max-height: $button-mobile-size;
+    height: $button-mobile-size;
+    width: $button-mobile-size;
     color: $white;
     background-color: $secondary-color;
     background-image: url(/assets/media/common/menu-burger.svg);

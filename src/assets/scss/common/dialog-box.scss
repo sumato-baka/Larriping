@@ -1,0 +1,65 @@
+.dialog-box {
+    display: none;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 40px 0 0 0;
+    border-radius: $border-radius !important;
+    width: 336px;
+}
+
+.dialog-box__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 11px;
+    text-align: center;
+}
+
+.dialog-box__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 30.8px;
+}
+
+.dialog-box__plain-text {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+}
+
+.dialog-box__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.dialog-box__form-item {
+    width: 260px;
+    height: 52px;
+    border-radius: $border-radius;
+}
+
+.dialog-box__form-field {
+    font-size: 14px;
+    line-height: 16.8px;
+    padding-left: 20px;
+    color: color.change($black, $alpha: 0.5);
+    background-color: #E5F3EF;
+    border: unset;
+}
+
+.dialog-box .button {
+    font-size: 16px;
+    line-height: 19.2px;
+    height: 52px;
+}
+
+.dialog-box__form-privacy-policy {
+    color: color.change($black, $alpha: 0.5);
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+}
