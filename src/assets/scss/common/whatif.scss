@@ -10,7 +10,7 @@
 
     @include media-tablet {
         & {
-            margin: 68px 0 0 0;
+            margin: 70px 0 0 0;
         }
     }
 
@@ -171,9 +171,9 @@
     }
 
     @include media-desktop {
-
         & {
             column-gap: 60px;
+            padding: 20px 51px 20px 40px;
         }
 
         &::before {
