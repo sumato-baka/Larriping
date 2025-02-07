@@ -176,9 +176,48 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="preview__order-button button button-dark" type="button">
+                        <button data-fancybox data-src="#dialog-order" class="preview__order-button button button-dark"
+                            type="button">
                             Заказать выезд мастера
                         </button>
+
+                        <div id="dialog-order" class="dialog-box dialog-order">
+                            <div class="dialog-box__text-container">
+                                <span class="dialog-box__title">
+                                    <span>
+                                        Заказать
+                                    </span>
+                                    <span>
+                                        выезд мастера
+                                    </span>
+                                </span>
+
+                                <span class="dialog-box__plain-text">
+                                    <span>
+                                        Запишитесь на техобслуживание
+                                    </span>
+                                    <span>
+                                        заранее и получите скидку
+                                    </span>
+                                    <span>
+                                        5000 рублей
+                                    </span>
+                                </span>
+                            </div>
+
+                            <form class="dialog-box__form">
+                                <input class="dialog-box__form-item dialog-box__form-field" type="text"
+                                    placeholder="Ваше имя">
+                                <input class="dialog-box__form-item dialog-box__form-field" type="text"
+                                    placeholder="Номер телефона">
+                                <button class="dialog-box__form-item button button-dark"
+                                    type="button">Записаться</button>
+                                <span class="dialog-box__form-privacy-policy">
+                                    Нажимая кнопку “Записаться”, вы соглашаетесь с политикой конфиденциальности
+                                </span>
+                            </form>
+                        </div>
+
                     </div>
                     <div class="preview__item">
                         <picture class="preview__image">
