@@ -81,8 +81,16 @@ a {
     cursor: pointer;
 }
 
-input[type='checkbox'] {
-    cursor: pointer;
+input {
+    outline: unset;
+
+    &[type='checkbox'] {
+        cursor: pointer;
+    }
+}
+
+ul {
+    margin: 0;
 }
 
 h1 {

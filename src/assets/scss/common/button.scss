@@ -13,6 +13,7 @@ $button-circle-size: 14px;
     padding: $common-padding;
     transition: $button-transition;
     cursor: pointer;
+    outline: unset;
 
     &::after {
         content: ' ';
