@@ -176,8 +176,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <button data-fancybox data-src="#dialog-order" class="preview__order-button button button-dark"
-                            type="button">
+                        <button class="preview__order-button button button-dark" type="button" data-fancybox
+                            data-src="#dialog-order">
                             Заказать выезд мастера
                         </button>
 
@@ -553,9 +553,43 @@
                         и получите скидку 5000 рублей
                     </h1>
 
-                    <button class="page-footer__button button button-dark" type="button">
+                    <button class="page-footer__button button button-dark" type="button" data-fancybox
+                        data-src="#dialog-recall">
                         Записаться
                     </button>
+
+                    <div id="dialog-recall" class="dialog-box dialog-recall">
+                        <div class="dialog-box__text-container">
+                            <span class="dialog-box__title">
+                                Перезвоните мне
+                            </span>
+
+                            <span class="dialog-box__plain-text">
+                                <span>
+                                    Оставьте ваши контакты,
+                                </span>
+                                <span>
+                                    мы перезвоним и проведем
+                                </span>
+                                <span>
+                                    консультацию для Вас
+                                </span>
+                            </span>
+                        </div>
+
+                        <form class="dialog-box__form">
+                            <input class="dialog-box__form-item dialog-box__form-field" type="text"
+                                placeholder="Ваше имя">
+                            <input class="dialog-box__form-item dialog-box__form-field" type="text"
+                                placeholder="Номер телефона">
+                            <button class="dialog-box__form-item button button-dark" type="button">Отправить
+                                заявку</button>
+                            <span class="dialog-box__form-privacy-policy">
+                                Нажимая кнопку “Отправить заявку”, вы соглашаетесь с политикой конфиденциальности
+                            </span>
+                        </form>
+                    </div>
+
                 </div>
             </div>
 

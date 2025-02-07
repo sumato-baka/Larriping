@@ -241,9 +241,7 @@
         }
     }
 
-    @include media-tablet {
-        & {}
-    }
+    @include media-tablet {}
 
     @include media-desktop {
         & {
@@ -267,15 +265,7 @@
 }
 
 .page-footer__link {
-    @include media-mobile {}
-
-    @include media-tablet {}
-
-    @include media-desktop {
-        & {
-            color: color.change($black, $alpha: 0.7);
-        }
-    }
+    color: color.change($black, $alpha: 0.7);
 }
 
 .page-footer__button {
