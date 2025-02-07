@@ -16,7 +16,8 @@ const build_media_path = 'build/assets/media';
 function _styles() {
 	return src([
 		src_assets_path + '/scss/style.scss',
-		src_assets_path + '/scss/**/*.scss'
+		src_assets_path + '/scss/**/*.scss',
+		src_assets_path + '/libs/**/*.css'
 	])
 		.pipe(concat('style.min.css'))
 		.pipe(scss({ style: 'compressed' }))
@@ -27,7 +28,8 @@ function _styles() {
 function _scripts() {
 	return src([
 		src_assets_path + '/js/script.js',
-		src_assets_path + '/js/**/*.js'
+		src_assets_path + '/js/**/*.js',
+		src_assets_path + '/libs/**/*.js'
 	])
 		.pipe(order([
 			'jQuery/jQuery.js'
@@ -64,11 +66,13 @@ function _pages() {
 function _watcher() {
 	watch([
 		src_assets_path + '/scss/style.scss',
-		src_assets_path + '/scss/**/*.scss'
+		src_assets_path + '/scss/**/*.scss',
+		src_assets_path + '/libs/**/*.css'
 	], _styles)
 	watch([
 		src_assets_path + '/js/*.js',
-		src_assets_path + '/js/**/*.js'
+		src_assets_path + '/js/**/*.js',
+		src_assets_path + '/libs/**/*.js'
 	], _scripts)
 	watch([
 		src_assets_path + '/**/*.svg',
@@ -107,7 +111,13 @@ exports.media = _media;
 exports.fonts = _fonts;
 exports.pages = _pages;
 exports.clean = _clean;
-exports.build = _build;
+exports.build = series(
+	_styles,
+	_scripts,
+	_media,
+	_fonts,
+	_pages
+)
 exports.cbuild = series(_clean, _build);
 
 exports.run = parallel(
