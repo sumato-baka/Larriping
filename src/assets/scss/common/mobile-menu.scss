@@ -34,49 +34,46 @@ $bottom-menu-image-size: 26px;
         }
     }
 
-    @include media-tablet {
+    @include media-tablet {}
+
+    @include media-desktop {
         & {
             display: none;
         }
     }
-
-    @include media-desktop {}
 }
 
 .mobile-menu__base {
+    display: block;
     position: absolute;
-    background-color: color.change($black, $alpha: 0.5);
     width: 100vw;
+    height: 0;
+    background-color: color.change($black, $alpha: 0.5);
+    opacity: 0;
 
-    @include media-mobile {
-        & {
-            display: block;
-            opacity: 0;
-            height: 0;
-            transition:
-                opacity $menu-transition-close,
-                height $menu-base-transition-close;
-        }
+    transition:
+        opacity $menu-transition-close,
+        height $menu-base-transition-close;
 
-        &-active {
-            opacity: 1;
-            height: 100vh;
-            transition:
-                opacity $menu-transition-open,
-                height $menu-base-transition-open;
-        }
+    &-active {
+        opacity: 1;
+        height: 100vh;
+        transition:
+            opacity $menu-transition-open,
+            height $menu-base-transition-open;
     }
 
-    @include media-tablet {
-        & {
-            display: none;
-        }
-    }
+    @include media-mobile {}
+
+    @include media-tablet {}
 
     @include media-desktop {}
 }
 
 .mobile-menu__side {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
     position: absolute;
     right: calc(-1 * $side-menu-width);
     width: calc($side-menu-width - $side-menu-hpadding * 2);
@@ -84,29 +81,13 @@ $bottom-menu-image-size: 26px;
     padding: 1em $side-menu-hpadding 2em $side-menu-hpadding;
     background-color: $white;
     border-radius: $border-radius 0 0 $border-radius;
-    row-gap: 1.5em;
     touch-action: none;
+    transition: $menu-transition-close;
 
-    @include media-mobile {
-        & {
-            display: flex;
-            flex-direction: column;
-            transition: $menu-transition-close;
-        }
-
-        &-active {
-            transform: translateX(calc(-1 * $side-menu-width));
-            transition: $menu-transition-open;
-        }
+    &-active {
+        transform: translateX(calc(-1 * $side-menu-width));
+        transition: $menu-transition-open;
     }
-
-    @include media-tablet {
-        & {
-            display: none;
-        }
-    }
-
-    @include media-desktop {}
 }
 
 .mobile-menu__side>img {
@@ -115,23 +96,10 @@ $bottom-menu-image-size: 26px;
 }
 
 .mobile-menu__bottom {
+    display: flex;
     position: fixed;
     bottom: 0;
     width: 100%;
-
-    @include media-mobile {
-        & {
-            display: flex;
-        }
-    }
-
-    @include media-tablet {
-        & {
-            display: none;
-        }
-    }
-
-    @include media-desktop {}
 }
 
 .mobile-menu__bottom-item {
