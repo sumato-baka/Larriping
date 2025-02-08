@@ -1,5 +1,5 @@
 $(window).on('load', () => {
-    $('body').removeClass('preload')
+    $('body').removeClass('preload');
 
     Fancybox.bind("[data-fancybox]", {
     });
